@@ -1,115 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Helpdesk &amp; Circular Portal - MRU</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Helpdesk & Circular Portal - MRU</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6f9;color:#222}
+header{background:#0b3d91;color:#fff;padding:15px 20px;text-align:center}
+nav{background:#082a66;display:flex;flex-wrap:wrap;justify-content:center}
+nav a{color:#fff;text-decoration:none;padding:12px 16px}
+nav a:hover{background:#f57c00}
+.banner img{width:100%;max-height:260px;object-fit:cover;display:block}
+.layout{display:flex;flex-wrap:wrap;gap:20px;padding:20px;max-width:1200px;margin:auto}
+main{flex:3;min-width:300px}
+aside{flex:1;min-width:230px;background:#fff;padding:15px;border-radius:8px;height:fit-content}
+section{background:#fff;padding:15px;margin-bottom:20px;border-radius:8px}
+h2{color:#0b3d91;border-bottom:2px solid #f57c00;padding-bottom:5px}
+article{border-left:4px solid #f57c00;padding:8px 12px;margin:10px 0;background:#fafafa}
+article time{color:#777;font-size:13px}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #ccc;padding:8px;text-align:left}
+th{background:#0b3d91;color:#fff}
+label{display:block;margin-top:10px;font-weight:bold}
+input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;padding:8px;margin-top:4px}
+button,input[type=submit],input[type=reset]{padding:9px 18px;margin-top:12px;border:0;border-radius:4px;color:#fff;cursor:pointer}
+input[type=submit]{background:#2e7d32}
+input[type=reset]{background:#c62828}
+footer{background:#082a66;color:#fff;text-align:center;padding:15px}
+@media(max-width:600px){nav{flex-direction:column;text-align:center}}
+</style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Malla Reddy University logo" width="90">
-    <h1>Student Helpdesk &amp; Circular Portal</h1>
-    <p>Malla Reddy University</p>
-  </header>
+<header>
+<h1>Malla Reddy University</h1>
+<p>Student Helpdesk &amp; Circular Portal</p>
+</header>
 
-  <nav>
-    <ul>
-      <li><a href="#circulars">Circulars</a></li>
-      <li><a href="#exams">Exams</a></li>
-      <li><a href="#announcements">Announcements</a></li>
-      <li><a href="#downloads">Downloads</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#enquiry">Enquiry</a></li>
-    </ul>
-  </nav>
+<nav>
+<a href="#circulars">Circulars</a>
+<a href="#exams">Exam Notifications</a>
+<a href="#announcements">Announcements</a>
+<a href="#downloads">Downloads</a>
+<a href="#enquiry">Enquiry</a>
+<a href="#contact">Contact</a>
+</nav>
 
-  <main>
-    <section id="circulars">
-      <h2>Latest Circulars</h2>
-      <table border="1">
-        <tr><th>Date</th><th>Title</th><th>Download</th></tr>
-        <tr><td>10-11-2026</td><td>Academic Calendar</td>
-            <td><a href="calendar.pdf" download>PDF</a></td></tr>
-        <tr><td>12-11-2026</td><td>Fee Payment Notice</td>
-            <td><a href="fees.pdf" download>PDF</a></td></tr>
-      </table>
-    </section>
+<div class="banner">
+<img src="https://picsum.photos/1200/260?30" alt="University campus">
+</div>
 
-    <section id="exams">
-      <h2>Examination Notifications</h2>
-      <article>
-        <h3>Minor-1 Schedule</h3>
-        <p>Minor-1 examinations begin from 05-12-2026. Check the timetable.</p>
-      </article>
-      <article>
-        <h3>Endterm Notification</h3>
-        <p>Endterm exam forms must be submitted before the due date.</p>
-      </article>
-    </section>
+<div class="layout">
+<main>
+<section id="circulars">
+<h2>Academic Circulars</h2>
+<article>
+<h3>Revised Academic Calendar</h3>
+<time>10 Nov 2026</time>
+<p>The revised calendar for the current semester is available for download.</p>
+</article>
+<article>
+<h3>Fee Payment Last Date</h3>
+<time>05 Nov 2026</time>
+<p>Last date for semester fee payment without fine is 30 November.</p>
+</article>
+</section>
 
-    <section id="announcements">
-      <h2>Campus Announcements</h2>
-      <figure>
-        <img src="campus.jpg" alt="MRU campus" width="300">
-        <figcaption>Annual Tech Fest this month</figcaption>
-      </figure>
-    </section>
+<section id="exams">
+<h2>Examination Notifications</h2>
+<table>
+<tr><th>Exam</th><th>Date</th><th>Notification</th></tr>
+<tr><td>Minor-2</td><td>05 Dec 2026</td><td><a href="#">Download PDF</a></td></tr>
+<tr><td>Endterm</td><td>15 Jan 2027</td><td><a href="#">Download PDF</a></td></tr>
+</table>
+</section>
 
-    <section id="downloads">
-      <h2>Important Links and Downloads</h2>
-      <ul>
-        <li><a href="https://www.mallareddyuniversity.ac.in" target="_blank">University Website</a></li>
-        <li><a href="syllabus.pdf" download>Syllabus (PDF)</a></li>
-        <li><a href="timetable.pdf" download>Timetable (PDF)</a></li>
-      </ul>
-    </section>
+<section id="announcements">
+<h2>Campus Announcements</h2>
+<article>
+<h3>Annual Tech Fest</h3>
+<time>20 Nov 2026</time>
+<p><img src="https://picsum.photos/300/150?31" alt="Tech fest poster" style="max-width:100%"></p>
+</article>
+</section>
 
-    <section id="contact">
-      <h2>Contact Information</h2>
-      <address>
-        Helpdesk, Malla Reddy University<br>
-        Maisammaguda, Kompally, Hyderabad - 500100<br>
-        Email: helpdesk@mru.edu.in | Phone: 040-12345678
-      </address>
-    </section>
+<section id="downloads">
+<h2>Downloadable Resources</h2>
+<ul>
+<li><a href="#" download>Timetable (PDF)</a></li>
+<li><a href="#" download>Leave Application Form</a></li>
+<li><a href="#" download>Hall Ticket Instructions</a></li>
+</ul>
+</section>
 
-    <section id="enquiry">
-      <h2>Student Enquiry Form</h2>
-      <form action="#" method="post">
-        <fieldset>
-          <legend>Enquiry Details</legend>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required><br><br>
+<section id="enquiry">
+<h2>Student Enquiry Form</h2>
+<form onsubmit="alert('Enquiry submitted successfully!'); return false;">
+<label for="n">Name</label>
+<input type="text" id="n" required>
 
-          <label for="roll">Roll Number:</label>
-          <input type="text" id="roll" name="roll" required><br><br>
+<label for="r">Roll Number</label>
+<input type="text" id="r" required>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required><br><br>
+<label for="e">Email</label>
+<input type="email" id="e" required>
 
-          <label for="phone">Phone:</label>
-          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+<label for="m">Mobile</label>
+<input type="tel" id="m" pattern="[6-9][0-9]{9}" title="10-digit mobile number" required>
 
-          <label for="type">Enquiry Type:</label>
-          <select id="type" name="type">
-            <option>Academic</option>
-            <option>Examination</option>
-            <option>Fees</option>
-            <option>Other</option>
-          </select><br><br>
+<label for="t">Enquiry Type</label>
+<select id="t">
+<option>Academic</option>
+<option>Examination</option>
+<option>Fee</option>
+<option>Hostel</option>
+</select>
 
-          <label for="msg">Message:</label><br>
-          <textarea id="msg" name="msg" rows="4" cols="40" required></textarea><br><br>
+<label>Preferred Contact</label>
+<input type="radio" name="c" checked> Email
+<input type="radio" name="c"> Phone
 
-          <button type="submit">Submit</button>
-          <button type="reset">Reset</button>
-        </fieldset>
-      </form>
-    </section>
-  </main>
+<label for="msg">Message</label>
+<textarea id="msg" rows="4" required></textarea>
 
-  <footer>
-    <p>&copy; 2026 Malla Reddy University. All rights reserved.</p>
-  </footer>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+</section>
+</main>
+
+<aside>
+<h2>Quick Links</h2>
+<ul>
+<li><a href="#">Library</a></li>
+<li><a href="#">Examination Branch</a></li>
+<li><a href="#">Fee Payment</a></li>
+<li><a href="#">Timetable</a></li>
+</ul>
+<h2>Helpdesk</h2>
+<p>Phone: 040-1234 5678<br>Mon-Sat, 9 AM - 5 PM</p>
+</aside>
+</div>
+
+<footer id="contact">
+<p>Malla Reddy University, Maisammaguda, Hyderabad - 500100 | helpdesk@mru.edu.in</p>
+<p>&copy; 2026 MRU</p>
+</footer>
 </body>
 </html>
