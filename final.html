@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Helpdesk & Circular Portal - MRU</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6f9;color:#222}
+header{background:#0b3d91;color:#fff;padding:15px 20px;text-align:center}
+nav{background:#082a66;display:flex;flex-wrap:wrap;justify-content:center}
+nav a{color:#fff;text-decoration:none;padding:12px 16px}
+nav a:hover{background:#f57c00}
+.banner img{width:100%;max-height:260px;object-fit:cover;display:block}
+.layout{display:flex;flex-wrap:wrap;gap:20px;padding:20px;max-width:1200px;margin:auto}
+main{flex:3;min-width:300px}
+aside{flex:1;min-width:230px;background:#fff;padding:15px;border-radius:8px;height:fit-content}
+section{background:#fff;padding:15px;margin-bottom:20px;border-radius:8px}
+h2{color:#0b3d91;border-bottom:2px solid #f57c00;padding-bottom:5px}
+article{border-left:4px solid #f57c00;padding:8px 12px;margin:10px 0;background:#fafafa}
+article time{color:#777;font-size:13px}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #ccc;padding:8px;text-align:left}
+th{background:#0b3d91;color:#fff}
+label{display:block;margin-top:10px;font-weight:bold}
+input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;padding:8px;margin-top:4px}
+button,input[type=submit],input[type=reset]{padding:9px 18px;margin-top:12px;border:0;border-radius:4px;color:#fff;cursor:pointer}
+input[type=submit]{background:#2e7d32}
+input[type=reset]{background:#c62828}
+footer{background:#082a66;color:#fff;text-align:center;padding:15px}
+@media(max-width:600px){nav{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<header>
+<h1>Malla Reddy University</h1>
+<p>Student Helpdesk &amp; Circular Portal</p>
+</header>
+
+<nav>
+<a href="#circulars">Circulars</a>
+<a href="#exams">Exam Notifications</a>
+<a href="#announcements">Announcements</a>
+<a href="#downloads">Downloads</a>
+<a href="#enquiry">Enquiry</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="banner">
+<img src="https://picsum.photos/1200/260?30" alt="University campus">
+</div>
+
+<div class="layout">
+<main>
+<section id="circulars">
+<h2>Academic Circulars</h2>
+<article>
+<h3>Revised Academic Calendar</h3>
+<time>10 Nov 2026</time>
+<p>The revised calendar for the current semester is available for download.</p>
+</article>
+<article>
+<h3>Fee Payment Last Date</h3>
+<time>05 Nov 2026</time>
+<p>Last date for semester fee payment without fine is 30 November.</p>
+</article>
+</section>
+
+<section id="exams">
+<h2>Examination Notifications</h2>
+<table>
+<tr><th>Exam</th><th>Date</th><th>Notification</th></tr>
+<tr><td>Minor-2</td><td>05 Dec 2026</td><td><a href="#">Download PDF</a></td></tr>
+<tr><td>Endterm</td><td>15 Jan 2027</td><td><a href="#">Download PDF</a></td></tr>
+</table>
+</section>
+
+<section id="announcements">
+<h2>Campus Announcements</h2>
+<article>
+<h3>Annual Tech Fest</h3>
+<time>20 Nov 2026</time>
+<p><img src="https://picsum.photos/300/150?31" alt="Tech fest poster" style="max-width:100%"></p>
+</article>
+</section>
+
+<section id="downloads">
+<h2>Downloadable Resources</h2>
+<ul>
+<li><a href="#" download>Timetable (PDF)</a></li>
+<li><a href="#" download>Leave Application Form</a></li>
+<li><a href="#" download>Hall Ticket Instructions</a></li>
+</ul>
+</section>
+
+<section id="enquiry">
+<h2>Student Enquiry Form</h2>
+<form onsubmit="alert('Enquiry submitted successfully!'); return false;">
+<label for="n">Name</label>
+<input type="text" id="n" required>
+
+<label for="r">Roll Number</label>
+<input type="text" id="r" required>
+
+<label for="e">Email</label>
+<input type="email" id="e" required>
+
+<label for="m">Mobile</label>
+<input type="tel" id="m" pattern="[6-9][0-9]{9}" title="10-digit mobile number" required>
+
+<label for="t">Enquiry Type</label>
+<select id="t">
+<option>Academic</option>
+<option>Examination</option>
+<option>Fee</option>
+<option>Hostel</option>
+</select>
+
+<label>Preferred Contact</label>
+<input type="radio" name="c" checked> Email
+<input type="radio" name="c"> Phone
+
+<label for="msg">Message</label>
+<textarea id="msg" rows="4" required></textarea>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+</section>
+</main>
+
+<aside>
+<h2>Quick Links</h2>
+<ul>
+<li><a href="#">Library</a></li>
+<li><a href="#">Examination Branch</a></li>
+<li><a href="#">Fee Payment</a></li>
+<li><a href="#">Timetable</a></li>
+</ul>
+<h2>Helpdesk</h2>
+<p>Phone: 040-1234 5678<br>Mon-Sat, 9 AM - 5 PM</p>
+</aside>
+</div>
+
+<footer id="contact">
+<p>Malla Reddy University, Maisammaguda, Hyderabad - 500100 | helpdesk@mru.edu.in</p>
+<p>&copy; 2026 MRU</p>
+</footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Services - MRU</title>
+<style>
+:root{--main:#0b3d91;--accent:#f57c00;--bg:#f0f4fa}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:#222}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;background:var(--main);color:#fff;padding:12px 25px}
+header nav a{color:#fff;text-decoration:none;margin-left:18px;transition:color .3s}
+header nav a:hover{color:var(--accent)}
+.hero{text-align:center;padding:70px 20px;color:#fff;background:linear-gradient(135deg,#0b3d91,#1976d2);animation:fade 1.2s ease}
+.hero h1{font-size:2.4rem;margin:0 0 10px}
+.hero a{display:inline-block;margin-top:15px;padding:12px 28px;background:var(--accent);color:#fff;border-radius:30px;text-decoration:none;transition:transform .3s}
+.hero a:hover{transform:scale(1.08)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;max-width:1100px;margin:40px auto;padding:0 20px}
+.card{background:#fff;padding:25px;border-radius:12px;text-align:center;border:1px solid #dde;box-shadow:0 2px 6px rgba(0,0,0,.08);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-8px);box-shadow:0 10px 20px rgba(0,0,0,.18)}
+.card .icon{font-size:42px}
+.card h3{color:var(--main);margin:10px 0}
+.card a{color:var(--accent);font-weight:bold;text-decoration:none}
+footer{background:#082a66;color:#fff;text-align:center;padding:18px;margin-top:30px}
+@keyframes fade{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:none}}
+@media(max-width:600px){
+header{flex-direction:column}
+header nav a{margin:6px 8px;display:inline-block}
+.hero h1{font-size:1.7rem}
+}
+</style>
+</head>
+<body>
+<header>
+<h2>MRU Student Services</h2>
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Everything a Student Needs, in One Place</h1>
+<p>Quick access to library, transport, hostel, placements and examinations.</p>
+<a href="#services">Explore Services</a>
+</section>
+
+<section class="grid" id="services">
+<div class="card">
+<div class="icon">📚</div>
+<h3>Library</h3>
+<p>Catalogue, e-books and timings.</p>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<div class="icon">🚌</div>
+<h3>Transport</h3>
+<p>Bus routes and schedules.</p>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<div class="icon">🏠</div>
+<h3>Hostel</h3>
+<p>Rules, allotment and mess menu.</p>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<div class="icon">💼</div>
+<h3>Placements</h3>
+<p>Drives, training and results.</p>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<div class="icon">📝</div>
+<h3>Examinations</h3>
+<p>Timetables, hall tickets, results.</p>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<div class="icon">❓</div>
+<h3>Helpdesk</h3>
+<p>Raise queries and get support.</p>
+<a href="#">Open</a>
+</div>
+</section>
+
+<footer>
+&copy; 2026 Malla Reddy University | studentservices@mru.edu.in
+</footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exam Eligibility Checker</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:900px;margin:20px auto;padding:0 15px;background:#f4f6f9}
+h2{color:#0b3d91}
+.box{background:#fff;padding:15px;border-radius:8px;margin-bottom:15px}
+input,select{padding:8px;margin:4px 6px 4px 0}
+button{padding:9px 16px;border:0;border-radius:4px;color:#fff;background:#0b3d91;cursor:pointer}
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{border:1px solid #ccc;padding:8px;text-align:center}
+th{background:#0b3d91;color:#fff}
+.ok{background:#c8e6c9}
+.cond{background:#ffe0b2}
+.no{background:#ffcdd2}
+#err{color:red}
+</style>
+</head>
+<body>
+<h2>Attendance / Exam Eligibility Checker</h2>
+
+<div class="box">
+<input id="name" placeholder="Student name">
+<input id="roll" placeholder="Roll number">
+<input id="att" type="number" placeholder="Attendance %">
+<input id="marks" type="number" placeholder="Internal marks %">
+
+<select id="exam">
+<option>Minor-1</option>
+<option>Minor-2</option>
+<option>Endterm</option>
+</select>
+
+<button onclick="addStudent()">Add Student</button>
+<button onclick="showResults()">Check Eligibility</button>
+<p id="err"></p>
+</div>
+
+<div id="summary"></div>
+
+<table id="tbl">
+<thead>
+<tr>
+<th>Roll No</th><th>Name</th><th>Exam</th>
+<th>Attendance</th><th>Marks</th><th>Status</th><th>Reason</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<script>
+const students = [];
+const ELIGIBLE = 75, CONDONATION = 65, MIN_MARKS = 40;
+
+function addStudent() {
+  const name = document.getElementById("name").value.trim();
+  const roll = document.getElementById("roll").value.trim();
+  const att = parseFloat(document.getElementById("att").value);
+  const marks = parseFloat(document.getElementById("marks").value);
+  const exam = document.getElementById("exam").value;
+  const err = document.getElementById("err");
+
+  if (!name || !roll || isNaN(att) || isNaN(marks)) {
+    err.innerText = "Fill in all fields.";
+    return;
+  }
+  if (att < 0 || att > 100 || marks < 0 || marks > 100) {
+    err.innerText = "Values must be between 0 and 100.";
+    return;
+  }
+  if (students.some(s => s.roll === roll && s.exam === exam)) {
+    err.innerText = "Record already exists for this roll number and exam.";
+    return;
+  }
+
+  err.innerText = "";
+  students.push({name, roll, att, marks, exam});
+  showResults();
+}
+
+function checkEligibility(s) {
+  let needMarks;
+
+  switch (s.exam) {
+    case "Minor-1": needMarks = 0; break;
+    case "Minor-2": needMarks = 0; break;
+    case "Endterm": needMarks = MIN_MARKS; break;
+  }
+
+  if (s.att >= ELIGIBLE && s.marks >= needMarks)
+    return ["Eligible","ok","Meets attendance" +
+    (needMarks ? " and marks" : "") + " criteria"];
+
+  if (s.att >= ELIGIBLE)
+    return ["Not Eligible","no","Internal marks below " + MIN_MARKS + "%"];
+
+  if (s.att >= CONDONATION && s.marks >= needMarks)
+    return ["Condonation","cond","Attendance between " +
+    CONDONATION + "% and " + ELIGIBLE + "%"];
+
+  return ["Not Eligible","no","Attendance below " + CONDONATION + "%"];
+}
+
+function showResults() {
+  const body = document.querySelector("#tbl tbody");
+  body.innerHTML = "";
+
+  let e = 0, c = 0, n = 0;
+
+  for (let i = 0; i < students.length; i++) {
+    const s = students[i];
+    const [status, cls, reason] = checkEligibility(s);
+
+    if (status === "Eligible") e++;
+    else if (status === "Condonation") c++;
+    else n++;
+
+    body.innerHTML += `<tr class="${cls}">
+    <td>${s.roll}</td>
+    <td>${s.name}</td>
+    <td>${s.exam}</td>
+    <td>${s.att}%</td>
+    <td>${s.marks}%</td>
+    <td><b>${status}</b></td>
+    <td>${reason}</td>
+    </tr>`;
+  }
+
+  document.getElementById("summary").innerHTML =
+  `<div class="box"><b>Total:</b> ${students.length} |
+  <b>Eligible:</b> ${e} |
+  <b>Condonation:</b> ${c} |
+  <b>Not Eligible:</b> ${n}</div>`;
+}
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Online Student Service Portal</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f6f9;max-width:800px;margin:20px auto;padding:0 15px}
+h2{color:#0b3d91}
+.form{background:#fff;padding:18px;border-radius:8px;margin-bottom:15px;display:none}
+label{display:block;margin-top:10px;font-weight:bold}
+input,select,textarea{width:100%;padding:8px;margin-top:4px;box-sizing:border-box}
+.err{color:#c62828;font-size:13px;min-height:16px}
+.msg{padding:10px;border-radius:5px;margin:10px 0;display:none}
+.good{background:#c8e6c9;color:#1b5e20}
+.bad{background:#ffcdd2;color:#b71c1c}
+button{margin-top:12px;padding:9px 18px;background:#0b3d91;color:#fff;border:0;border-radius:4px;cursor:pointer}
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{border:1px solid #ccc;padding:8px}
+th{background:#0b3d91;color:#fff}
+</style>
+</head>
+<body>
+
+<h2>Online Student Service Portal</h2>
+
+<label for="service">Select Service</label>
+<select id="service" onchange="showForm()">
+<option value="">-- Choose --</option>
+<option value="leave">Leave Request</option>
+<option value="bonafide">Bonafide Certificate</option>
+<option value="course">Elective Course Registration</option>
+</select>
+
+<div id="msg" class="msg"></div>
+
+<form id="leave" class="form" onsubmit="return submitLeave()">
+<h3>Leave Request</h3>
+<label>Roll Number</label>
+<input id="l_roll" onkeyup="live(this,/^[A-Za-z0-9]{6,12}$/,'Enter a valid roll number')">
+<div class="err"></div>
+
+<label>Leave Type</label>
+<select id="l_type">
+<option>Medical</option>
+<option>Personal</option>
+<option>Event</option>
+</select>
+
+<label>From</label>
+<input type="date" id="l_from">
+
+<label>To</label>
+<input type="date" id="l_to">
+
+<label>Reason</label>
+<textarea id="l_reason" rows="3"></textarea>
+<div class="err" id="l_err"></div>
+<button>Submit Leave</button>
+</form>
+
+<form id="bonafide" class="form" onsubmit="return submitBonafide()">
+<h3>Bonafide Certificate</h3>
+<label>Roll Number</label>
+<input id="b_roll" onkeyup="live(this,/^[A-Za-z0-9]{6,12}$/,'Enter a valid roll number')">
+<div class="err"></div>
+
+<label>Purpose</label>
+<select id="b_purpose">
+<option>Passport</option>
+<option>Bank</option>
+<option>Scholarship</option>
+</select>
+
+<label>Number of Copies</label>
+<input type="number" id="b_copies" value="1">
+<div class="err" id="b_err"></div>
+<button>Apply</button>
+</form>
+
+<form id="course" class="form" onsubmit="return submitCourse()">
+<h3>Elective Course Registration (select up to 2)</h3>
+<div id="courseList"></div>
+
+<label>Roll Number</label>
+<input id="c_roll" onkeyup="live(this,/^[A-Za-z0-9]{6,12}$/,'Enter a valid roll number')">
+<div class="err" id="c_err"></div>
+<button>Register</button>
+</form>
+
+<h3>My Requests</h3>
+<table id="tbl">
+<thead>
+<tr><th>Ref No</th><th>Type</th><th>Details</th><th>Status</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<script>
+const requests = [];
+const electives = [
+  {n:"Machine Learning",seats:2},
+  {n:"Cyber Security",seats:3},
+  {n:"Cloud Computing",seats:1},
+  {n:"IoT",seats:3}
+];
+let refNo = 1000;
+
+function renderCourses() {
+  document.getElementById("courseList").innerHTML =
+  electives.map((c,i) =>
+  `<label><input type="checkbox" name="el" value="${i}"
+  ${c.seats==0?'disabled':''} style="width:auto">
+  ${c.n} (seats left: ${c.seats})</label>`).join("");
+}
+renderCourses();
+
+function showForm() {
+  ["leave","bonafide","course"].forEach(id =>
+  document.getElementById(id).style.display = "none");
+
+  const v = document.getElementById("service").value;
+  if (v) document.getElementById(v).style.display = "block";
+}
+
+function live(el,re,msg) {
+  el.nextElementSibling.innerText = re.test(el.value) ? "" : msg;
+}
+
+function notify(text,ok) {
+  const m = document.getElementById("msg");
+  m.className = "msg " + (ok ? "good" : "bad");
+  m.innerText = text;
+  m.style.display = "block";
+}
+
+function addRequest(type,details) {
+  const r = {
+    ref:++refNo,
+    type,
+    details,
+    status:"Pending"
+  };
+  requests.push(r);
+
+  const body = document.querySelector("#tbl tbody");
+  body.innerHTML = "";
+
+  requests.forEach(x => body.innerHTML +=
+  `<tr><td>${x.ref}</td><td>${x.type}</td>
+  <td>${x.details}</td><td>${x.status}</td></tr>`);
+
+  notify("Submitted successfully. Reference No: " + r.ref,true);
+}
+
+const rollOk = v => /^[A-Za-z0-9]{6,12}$/.test(v);
+
+function submitLeave() {
+  const roll = l_roll.value.trim();
+  const from = l_from.value;
+  const to = l_to.value;
+  const reason = l_reason.value.trim();
+
+  const err = document.getElementById("l_err");
+  const today = new Date().toISOString().split("T")[0];
+
+  if (!rollOk(roll))
+    err.innerText = "Invalid roll number.";
+  else if (!from || !to)
+    err.innerText = "Select both dates.";
+  else if (from < today)
+    err.innerText = "Leave cannot start in the past.";
+  else if (to < from)
+    err.innerText = "To-date cannot be before from-date.";
+  else if (reason.length < 10)
+    err.innerText = "Reason must be at least 10 characters.";
+  else {
+    err.innerText = "";
+    addRequest("Leave",`${roll}: ${l_type.value}, ${from} to ${to}`);
+    return false;
+  }
+
+  notify("Please correct the errors.",false);
+  return false;
+}
+
+function submitBonafide() {
+  const roll = b_roll.value.trim();
+  const copies = parseInt(b_copies.value);
+  const err = document.getElementById("b_err");
+
+  if (!rollOk(roll))
+    err.innerText = "Invalid roll number.";
+  else if (isNaN(copies) || copies < 1 || copies > 5)
+    err.innerText = "Copies must be between 1 and 5.";
+  else {
+    err.innerText = "";
+    addRequest("Bonafide",
+    `${roll}: ${b_purpose.value}, ${copies} copy(ies)`);
+    return false;
+  }
+
+  notify("Please correct the errors.",false);
+  return false;
+}
+
+function submitCourse() {
+  const roll = c_roll.value.trim();
+  const err = document.getElementById("c_err");
+
+  const chosen = [...document.querySelectorAll(
+  'input[name="el"]:checked')].map(x => parseInt(x.value));
+
+  if (!rollOk(roll))
+    err.innerText = "Invalid roll number.";
+  else if (chosen.length === 0)
+    err.innerText = "Select at least one course.";
+  else if (chosen.length > 2)
+    err.innerText = "You can select at most 2 courses.";
+  else {
+    err.innerText = "";
+    chosen.forEach(i => electives[i].seats--);
+    addRequest("Course",
+    `${roll}: ` + chosen.map(i => electives[i].n).join(", "));
+    renderCourses();
+    return false;
+  }
+
+  notify("Please correct the errors.",false);
+  return false;
+}
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Dashboard - MRU</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<div class="container-fluid">
+<a class="navbar-brand fw-bold" href="#">MRU Student Dashboard</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav me-auto">
+<li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+<li class="nav-item"><a class="nav-link" href="#timetable">Timetable</a></li>
+<li class="nav-item"><a class="nav-link" href="#exams">Exams</a></li>
+<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+</ul>
+
+<div class="dropdown">
+<button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">Student</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><a class="dropdown-item" href="#">Profile</a></li>
+<li><a class="dropdown-item" href="#">Logout</a></li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+
+<div class="container my-4">
+
+<div class="alert alert-warning alert-dismissible fade show">
+<strong>Fee Reminder:</strong> Semester fee of ₹45,000 is due by 30 Nov 2026.
+<button class="btn btn-sm btn-dark ms-2" data-bs-toggle="modal" data-bs-target="#feeModal">Pay Now</button>
+<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+
+<div class="alert alert-danger">
+Minor-2 exams begin on 05 Dec 2026. Download your hall ticket soon.
+</div>
+
+<!-- Summary cards -->
+<div class="row g-3 mb-4">
+
+<div class="col-12 col-sm-6 col-lg-3">
+<div class="card text-white bg-success h-100">
+<div class="card-body">
+<h6>Attendance</h6>
+<h2>82%</h2>
+<div class="progress">
+<div class="progress-bar bg-light" style="width:82%"></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg-3">
+<div class="card text-white bg-danger h-100">
+<div class="card-body">
+<h6>Pending Fee</h6>
+<h2>₹45,000</h2>
+<button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#feeModal">Pay</button>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg-3">
+<div class="card text-white bg-info h-100">
+<div class="card-body">
+<h6>Next Exam</h6>
+<h2>Minor-2</h2>
+<p class="mb-0">05 Dec 2026</p>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg-3">
+<div class="card text-white bg-secondary h-100">
+<div class="card-body">
+<h6>Notifications</h6>
+<h2>4 New</h2>
+<button class="btn btn-light btn-sm">View</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row g-4">
+
+<div class="col-12 col-lg-8">
+
+<div class="card mb-4" id="timetable">
+<div class="card-header fw-bold">Today's Timetable</div>
+<div class="table-responsive">
+<table class="table table-striped mb-0">
+<thead class="table-dark">
+<tr><th>Time</th><th>Subject</th><th>Room</th></tr>
+</thead>
+<tbody>
+<tr><td>9:00 - 10:00</td><td>Web Programming</td><td>B-204</td></tr>
+<tr><td>10:00 - 11:00</td><td>Data Structures</td><td>B-110</td></tr>
+<tr><td>11:15 - 12:15</td><td>Mathematics</td><td>A-305</td></tr>
+<tr><td>2:00 - 4:00</td><td>WP Lab</td><td>Lab-3</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="card" id="exams">
+<div class="card-header fw-bold">Examination Schedule</div>
+<div class="table-responsive">
+<table class="table table-bordered mb-0">
+<thead>
+<tr><th>Subject</th><th>Date</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>Web Programming</td><td>05 Dec</td><td><button class="btn btn-outline-primary btn-sm">Hall Ticket</button></td></tr>
+<tr><td>Data Structures</td><td>07 Dec</td><td><button class="btn btn-outline-primary btn-sm">Hall Ticket</button></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-lg-4">
+
+<div id="news" class="carousel slide mb-4" data-bs-ride="carousel">
+<div class="carousel-inner rounded">
+
+<div class="carousel-item active">
+<img src="https://picsum.photos/500/300?40" class="d-block w-100" alt="Tech fest">
+<div class="carousel-caption bg-dark bg-opacity-50">
+<h6>Annual Tech Fest</h6>
+</div>
+</div>
+
+<div class="carousel-item">
+<img src="https://picsum.photos/500/300?41" class="d-block w-100" alt="Placements">
+<div class="carousel-caption bg-dark bg-opacity-50">
+<h6>Placement Drive</h6>
+</div>
+</div>
+</div>
+
+<button class="carousel-control-prev" data-bs-target="#news" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" data-bs-target="#news" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+
+<div class="card" id="services">
+<div class="card-header fw-bold">Quick Services</div>
+<div class="list-group list-group-flush">
+<a href="#" class="list-group-item list-group-item-action">Library</a>
+<a href="#" class="list-group-item list-group-item-action">Bonafide Certificate</a>
+<a href="#" class="list-group-item list-group-item-action">Leave Request</a>
+<a href="#" class="list-group-item list-group-item-action">Helpdesk</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Fee Modal -->
+<div class="modal fade" id="feeModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5 class="modal-title">Fee Payment</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+<p>Amount due: <b>₹45,000</b></p>
+<select class="form-select">
+<option>UPI</option>
+<option>Net Banking</option>
+<option>Card</option>
+</select>
+</div>
+
+<div class="modal-footer">
+<button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+<button class="btn btn-success" data-bs-dismiss="modal">Confirm</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<footer class="bg-dark text-white text-center p-3 mt-4">
+&copy; 2026 Malla Reddy University | Helpdesk: helpdesk@mru.edu.in
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Dashboard - MRU</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<div class="container-fluid">
+<a class="navbar-brand fw-bold" href="#">MRU Student Dashboard</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav me-auto">
+<li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+<li class="nav-item"><a class="nav-link" href="#timetable">Timetable</a></li>
+<li class="nav-item"><a class="nav-link" href="#exams">Exams</a></li>
+<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+</ul>
+
+<div class="dropdown">
+<button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">Student</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><a class="dropdown-item" href="#">Profile</a></li>
+<li><a class="dropdown-item" href="#">Logout</a></li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+
+<div class="container my-4">
+
+<div class="alert alert-warning alert-dismissible fade show">
+<strong>Fee Reminder:</strong> Semester fee of ₹45,000 is due by 30 Nov 2026.
+<button class="btn btn-sm btn-dark ms-2" data-bs-toggle="modal" data-bs-target="#feeModal">Pay Now</button>
+<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+
+<div class="alert alert-danger">
+Minor-2 exams begin on 05 Dec 2026. Download your hall ticket soon.
+</div>
+
+<!-- Summary cards -->
+<div class="row g-3 mb-4">
+
+<div class="col-12 col-sm-6 col-lg-3">
+<div class="card text-white bg-success h-100">
+<div class="card-body">
+<h6>Attendance</h6>
+<h2>82%</h2>
+<div class="progress">
+<div class="progress-bar bg-light" style="width:82%"></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg-3">
+<div class="card text-white bg-danger h-100">
+<div class="card-body">
+<h6>Pending Fee</h6>
+<h2>₹45,000</h2>
+<button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#feeModal">Pay</button>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg-3">
+<div class="card text-white bg-info h-100">
+<div class="card-body">
+<h6>Next Exam</h6>
+<h2>Minor-2</h2>
+<p class="mb-0">05 Dec 2026</p>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg-3">
+<div class="card text-white bg-secondary h-100">
+<div class="card-body">
+<h6>Notifications</h6>
+<h2>4 New</h2>
+<button class="btn btn-light btn-sm">View</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row g-4">
+
+<div class="col-12 col-lg-8">
+
+<div class="card mb-4" id="timetable">
+<div class="card-header fw-bold">Today's Timetable</div>
+<div class="table-responsive">
+<table class="table table-striped mb-0">
+<thead class="table-dark">
+<tr><th>Time</th><th>Subject</th><th>Room</th></tr>
+</thead>
+<tbody>
+<tr><td>9:00 - 10:00</td><td>Web Programming</td><td>B-204</td></tr>
+<tr><td>10:00 - 11:00</td><td>Data Structures</td><td>B-110</td></tr>
+<tr><td>11:15 - 12:15</td><td>Mathematics</td><td>A-305</td></tr>
+<tr><td>2:00 - 4:00</td><td>WP Lab</td><td>Lab-3</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="card" id="exams">
+<div class="card-header fw-bold">Examination Schedule</div>
+<div class="table-responsive">
+<table class="table table-bordered mb-0">
+<thead>
+<tr><th>Subject</th><th>Date</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td>Web Programming</td><td>05 Dec</td><td><button class="btn btn-outline-primary btn-sm">Hall Ticket</button></td></tr>
+<tr><td>Data Structures</td><td>07 Dec</td><td><button class="btn btn-outline-primary btn-sm">Hall Ticket</button></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-lg-4">
+
+<div id="news" class="carousel slide mb-4" data-bs-ride="carousel">
+<div class="carousel-inner rounded">
+
+<div class="carousel-item active">
+<img src="https://picsum.photos/500/300?40" class="d-block w-100" alt="Tech fest">
+<div class="carousel-caption bg-dark bg-opacity-50">
+<h6>Annual Tech Fest</h6>
+</div>
+</div>
+
+<div class="carousel-item">
+<img src="https://picsum.photos/500/300?41" class="d-block w-100" alt="Placements">
+<div class="carousel-caption bg-dark bg-opacity-50">
+<h6>Placement Drive</h6>
+</div>
+</div>
+</div>
+
+<button class="carousel-control-prev" data-bs-target="#news" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" data-bs-target="#news" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+
+<div class="card" id="services">
+<div class="card-header fw-bold">Quick Services</div>
+<div class="list-group list-group-flush">
+<a href="#" class="list-group-item list-group-item-action">Library</a>
+<a href="#" class="list-group-item list-group-item-action">Bonafide Certificate</a>
+<a href="#" class="list-group-item list-group-item-action">Leave Request</a>
+<a href="#" class="list-group-item list-group-item-action">Helpdesk</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Fee Modal -->
+<div class="modal fade" id="feeModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5 class="modal-title">Fee Payment</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+<p>Amount due: <b>₹45,000</b></p>
+<select class="form-select">
+<option>UPI</option>
+<option>Net Banking</option>
+<option>Card</option>
+</select>
+</div>
+
+<div class="modal-footer">
+<button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+<button class="btn btn-success" data-bs-dismiss="modal">Confirm</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<footer class="bg-dark text-white text-center p-3 mt-4">
+&copy; 2026 Malla Reddy University | Helpdesk: helpdesk@mru.edu.in
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<a href="Program2.html">Program2</a><br>
+<a href="Program3.html">Program3</a><br>
+<a href="Program4.html">Program4</a><br>
+<a href="Program5.html">Program5</a><br>
