@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exam Eligibility Checker - MRU</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #999; padding: 8px; text-align: center; }
+    th { background: #1f4e79; color: #fff; }
+    .Eligible { color: green; font-weight: bold; }
+    .Condonation { color: darkorange; font-weight: bold; }
+    .NotEligible { color: red; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Attendance / Exam Eligibility Checker</h2>
+  <table id="result"></table>
+  <p id="summary"></p>
+
+  <script>
+    // Student records (array of objects)
+    const students = [
+      { name: "Ravi",  roll: "26CS001", attendance: 82, marks: 28 },
+      { name: "Anu",   roll: "26CS002", attendance: 70, marks: 22 },
+      { name: "Kiran", roll: "26CS003", attendance: 58, marks: 15 },
+      { name: "Sita",  roll: "26CS004", attendance: 90, marks: 10 }
+    ];
+
+    // Example rules - change as per official regulations
+    const MIN_ATT = 75, CONDONATION_ATT = 65, MIN_MARKS = 12;
+
+    function checkAttendance(att) {
+      if (att >= MIN_ATT) return "Eligible";
+      else if (att >= CONDONATION_ATT) return "Condonation";
+      else return "NotEligible";
+    }
+
+    function checkExam(student, exam) {
+      let status = checkAttendance(student.attendance);
+      // Endterm also needs minimum internal marks
+      if (exam === "Endterm" && student.marks < MIN_MARKS) status = "NotEligible";
+      return status;
+    }
+
+    function label(s) {
+      return s === "NotEligible" ? "Not Eligible" :
+             s === "Condonation" ? "Condonation Required" : "Eligible";
+    }
+
+    let html = "<tr><th>Name</th><th>Roll No</th><th>Attendance %</th><th>Marks</th>" +
+               "<th>Minor-1</th><th>Minor-2</th><th>Endterm</th></tr>";
+    let eligible = 0, notEligible = 0;
+
+    for (let i = 0; i < students.length; i++) {
+      const s = students[i];
+      html += "<tr><td>" + s.name + "</td><td>" + s.roll + "</td><td>" +
+              s.attendance + "</td><td>" + s.marks + "</td>";
+      for (const exam of ["Minor-1", "Minor-2", "Endterm"]) {
+        const st = checkExam(s, exam);
+        html += "<td class='" + st + "'>" + label(st) + "</td>";
+      }
+      html += "</tr>";
+      if (checkExam(s, "Endterm") === "Eligible") eligible++; else notEligible++;
+    }
+
+    document.getElementById("result").innerHTML = html;
+    document.getElementById("summary").textContent =
+      "Endterm eligible: " + eligible + " | Not eligible / condonation: " + notEligible;
+  </script>
+</body>
+</html>
