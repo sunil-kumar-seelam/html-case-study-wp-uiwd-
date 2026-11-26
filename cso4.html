@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Student Service Portal - MRU</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 700px; margin: 30px auto; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 8px; margin-top: 4px; }
+    .error { color: red; font-size: 0.85rem; }
+    #msg { margin-top: 12px; font-weight: bold; color: green; }
+    button { margin-top: 14px; padding: 10px 24px; background: #1f4e79; color: #fff; border: 0; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #999; padding: 6px; text-align: center; }
+  </style>
+</head>
+<body>
+  <h2>Online Student Service Portal</h2>
+  <form id="form" novalidate>
+    <label>Request Type</label>
+    <select id="type">
+      <option value="Leave">Leave</option>
+      <option value="Bonafide">Bonafide Certificate</option>
+      <option value="Course">Course Registration</option>
+    </select>
+
+    <label>Name</label><input id="name"><span class="error" id="e-name"></span>
+    <label>Roll Number</label><input id="roll"><span class="error" id="e-roll"></span>
+    <label>Email</label><input id="email"><span class="error" id="e-email"></span>
+    <label>Phone</label><input id="phone"><span class="error" id="e-phone"></span>
+
+    <div id="leaveBox">
+      <label>From</label><input type="date" id="from">
+      <label>To</label><input type="date" id="to"><span class="error" id="e-date"></span>
+    </div>
+    <label>Reason / Purpose / Elective</label>
+    <textarea id="reason" rows="3"></textarea><span class="error" id="e-reason"></span>
+
+    <button type="submit">Submit</button>
+    <div id="msg"></div>
+  </form>
+
+  <table id="records"></table>
+
+  <script>
+    const requests = [];   // array to store submitted requests
+
+    const $ = id => document.getElementById(id);
+
+    // Event: show date fields only for Leave
+    $("type").addEventListener("change", function () {
+      $("leaveBox").style.display = this.value === "Leave" ? "block" : "none";
+    });
+
+    function setError(id, text) { $("e-" + id).textContent = text; return text === ""; }
+
+    function validateForm() {
+      let ok = true;
+      ok = setError("name", $("name").value.trim().length < 3 ? "Enter a valid name" : "") && ok;
+      ok = setError("roll", $("roll").value.trim() === "" ? "Roll number required" : "") && ok;
+      ok = setError("email", !/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test($("email").value)
+                    ? "Enter a valid email" : "") && ok;
+      ok = setError("phone", !/^[0-9]{10}$/.test($("phone").value) ? "Enter 10-digit phone" : "") && ok;
+      ok = setError("reason", $("reason").value.trim().length < 10 ? "Minimum 10 characters" : "") && ok;
+      if ($("type").value === "Leave") {
+        const bad = !$("from").value || !$("to").value || $("to").value < $("from").value;
+        ok = setError("date", bad ? "Select valid from/to dates" : "") && ok;
+      } else setError("date", "");
+      return ok;
+    }
+
+    function renderTable() {
+      let html = "<tr><th>ID</th><th>Type</th><th>Name</th><th>Roll</th><th>Status</th></tr>";
+      requests.forEach(r => {
+        html += "<tr><td>" + r.id + "</td><td>" + r.type + "</td><td>" + r.name +
+                "</td><td>" + r.roll + "</td><td>" + r.status + "</td></tr>";
+      });
+      $("records").innerHTML = html;
+    }
+
+    // Event: form submit
+    $("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!validateForm()) { $("msg").style.color = "red";
+        $("msg").textContent = "Please correct the errors."; return; }
+      requests.push({ id: "REQ" + (requests.length + 1), type: $("type").value,
+        name: $("name").value.trim(), roll: $("roll").value.trim(), status: "Pending" });
+      $("msg").style.color = "green";
+      $("msg").textContent = "Request submitted successfully! ID: REQ" + requests.length;
+      renderTable();
+      this.reset();
+    });
+  </script>
+</body>
+</html>
